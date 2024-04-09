@@ -1,0 +1,6 @@
+verilog work "single_multiplier.v"
+verilog work "Memory.v"
+verilog work "adder.v"
+verilog work "matrixMulti.v"
+verilog work "test.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

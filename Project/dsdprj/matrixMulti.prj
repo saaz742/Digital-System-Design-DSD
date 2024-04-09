@@ -1,0 +1,4 @@
+verilog work "single_multiplier.v"
+verilog work "Memory.v"
+verilog work "adder.v"
+verilog work "matrixMulti.v"

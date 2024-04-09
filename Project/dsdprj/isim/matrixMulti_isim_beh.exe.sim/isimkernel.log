@@ -1,0 +1,28 @@
+Command line:
+   matrixMulti_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  11509
+
+Sun Jul 11 20:10:33 2021
+
+
+ Elaboration Time: 0.59375 sec
+
+ Current Memory Usage: 5179.9 Meg
+
+ Total Signals          : 109
+ Total Nets             : 1163
+ Total Signal Drivers   : 78
+ Total Blocks           : 13
+ Total Primitive Blocks : 11
+ Total Processes        : 98
+ Total Traceable Variables  : 309
+ Total Scalar Nets and Variables : 6099
+
+ Total Simulation Time: 0.65625 sec
+
+ Current Memory Usage: 5179.9 Meg
+
+Sun Jul 11 20:10:36 2021
+

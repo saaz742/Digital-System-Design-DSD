@@ -1,0 +1,19 @@
+ISim log file
+Running: C:\Users\sa\Desktop\dsdprj\test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/sa/Desktop/dsdprj/test_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 3000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Output is ready, time is 1110000 ps
+result[1][1] = 01000001011011000000010001111110
+result[1][2] = 01000010000100010010100101011101
+result[2][1] = 01000001110000111101011100001010
+result[2][2] = 01000010010000010100011110101110
+result[1][1] : confirmed
+result[1][2] : confirmed
+result[2][1] : confirmed
+result[2][2] : confirmed

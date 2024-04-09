@@ -1,0 +1,1475 @@
+
+================================================================================
+Timing constraint: Autotimespec constraint for clock net clk_BUFGP
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 5811299031 paths analyzed, 7070 endpoints analyzed, 203 failing endpoints
+ 203 timing errors detected. (203 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  28.389ns.
+--------------------------------------------------------------------------------
+Slack:                  -2.706 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.271 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.F4     net (fanout=24)       0.681   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.X      Tilo                  0.692   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT133
+    SLICE_X13Y94.F2      net (fanout=2)        1.275   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.G3       net (fanout=3)        0.735   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X8Y89.F3       net (fanout=50)       1.449   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X8Y89.X        Tif5x                 0.987   e[1].f[2].add_Sh71
+                                                       e[1].f[2].add_Sh71_G
+                                                       e[1].f[2].add_Sh71
+    SLICE_X8Y102.G4      net (fanout=2)        0.719   e[1].f[2].add_Sh71
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.689 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.254 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.F4     net (fanout=24)       0.715   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.X      Tilo                  0.692   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT1101
+    SLICE_X13Y94.F3      net (fanout=1)        1.224   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.G3       net (fanout=3)        0.735   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X8Y89.F3       net (fanout=50)       1.449   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X8Y89.X        Tif5x                 0.987   e[1].f[2].add_Sh71
+                                                       e[1].f[2].add_Sh71_G
+                                                       e[1].f[2].add_Sh71
+    SLICE_X8Y102.G4      net (fanout=2)        0.719   e[1].f[2].add_Sh71
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.674 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.239 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.F4     net (fanout=24)       0.681   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.X      Tilo                  0.692   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT133
+    SLICE_X13Y94.F2      net (fanout=2)        1.275   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.F3       net (fanout=3)        0.703   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_G
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X8Y89.F3       net (fanout=50)       1.449   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X8Y89.X        Tif5x                 0.987   e[1].f[2].add_Sh71
+                                                       e[1].f[2].add_Sh71_G
+                                                       e[1].f[2].add_Sh71
+    SLICE_X8Y102.G4      net (fanout=2)        0.719   e[1].f[2].add_Sh71
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.657 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.222 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.F4     net (fanout=24)       0.715   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.X      Tilo                  0.692   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT1101
+    SLICE_X13Y94.F3      net (fanout=1)        1.224   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.F3       net (fanout=3)        0.703   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_G
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X8Y89.F3       net (fanout=50)       1.449   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X8Y89.X        Tif5x                 0.987   e[1].f[2].add_Sh71
+                                                       e[1].f[2].add_Sh71_G
+                                                       e[1].f[2].add_Sh71
+    SLICE_X8Y102.G4      net (fanout=2)        0.719   e[1].f[2].add_Sh71
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.627 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.192 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.F4     net (fanout=24)       0.681   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.X      Tilo                  0.692   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT133
+    SLICE_X13Y94.F2      net (fanout=2)        1.275   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.G3       net (fanout=3)        0.735   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X9Y88.F2       net (fanout=50)       1.529   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X9Y88.X        Tif5x                 0.924   e[1].f[2].add_Sh75
+                                                       e[1].f[2].add_Sh75_G
+                                                       e[1].f[2].add_Sh75
+    SLICE_X8Y102.G3      net (fanout=1)        0.623   e[1].f[2].add_Sh75
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.610 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.175 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.F4     net (fanout=24)       0.715   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.X      Tilo                  0.692   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT1101
+    SLICE_X13Y94.F3      net (fanout=1)        1.224   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.G3       net (fanout=3)        0.735   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X9Y88.F2       net (fanout=50)       1.529   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X9Y88.X        Tif5x                 0.924   e[1].f[2].add_Sh75
+                                                       e[1].f[2].add_Sh75_G
+                                                       e[1].f[2].add_Sh75
+    SLICE_X8Y102.G3      net (fanout=1)        0.623   e[1].f[2].add_Sh75
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.609 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.174 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.F4     net (fanout=24)       0.681   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.X      Tilo                  0.692   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT133
+    SLICE_X13Y94.F2      net (fanout=2)        1.275   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.G3       net (fanout=3)        0.735   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X9Y88.G2       net (fanout=50)       1.511   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X9Y88.X        Tif5x                 0.924   e[1].f[2].add_Sh75
+                                                       e[1].f[2].add_Sh75_F
+                                                       e[1].f[2].add_Sh75
+    SLICE_X8Y102.G3      net (fanout=1)        0.623   e[1].f[2].add_Sh75
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.595 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.160 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.F4     net (fanout=24)       0.681   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.X      Tilo                  0.692   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT133
+    SLICE_X13Y94.F2      net (fanout=2)        1.275   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.F3       net (fanout=3)        0.703   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_G
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X9Y88.F2       net (fanout=50)       1.529   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X9Y88.X        Tif5x                 0.924   e[1].f[2].add_Sh75
+                                                       e[1].f[2].add_Sh75_G
+                                                       e[1].f[2].add_Sh75
+    SLICE_X8Y102.G3      net (fanout=1)        0.623   e[1].f[2].add_Sh75
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.592 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_25 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.144 (Levels of Logic = 33)
+  Clock Path Skew:      -0.131ns (1.410 - 1.541)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_25 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y131.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<25>
+                                                       e[1].f[2].add_number1_copy_25
+    SLICE_X26Y130.F1     net (fanout=6)        0.645   e[1].f[2].add_number1_copy<25>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.F4     net (fanout=24)       0.681   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y113.X      Tilo                  0.692   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT133
+    SLICE_X13Y94.F2      net (fanout=2)        1.275   e[1].f[2].add_number1_copy[22]_number2_copy[22]_mux_18_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.G3       net (fanout=3)        0.735   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X8Y89.F3       net (fanout=50)       1.449   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X8Y89.X        Tif5x                 0.987   e[1].f[2].add_Sh71
+                                                       e[1].f[2].add_Sh71_G
+                                                       e[1].f[2].add_Sh71
+    SLICE_X8Y102.G4      net (fanout=2)        0.719   e[1].f[2].add_Sh71
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+Slack:                  -2.592 (requirement - (data path - clock path skew + uncertainty))
+  Source:               e[1].f[2].add_number1_copy_23 (FF)
+  Destination:          res_2_2_69 (FF)
+  Requirement:          25.683
+  Data Path Delay:      28.157 (Levels of Logic = 33)
+  Clock Path Skew:      -0.118ns (1.410 - 1.528)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 25.683ns
+  Clock Uncertainty:    0.000
+
+  Maximum Data Path: e[1].f[2].add_number1_copy_23 to res_2_2_69
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X26Y126.XQ     Tcko                  0.631   e[1].f[2].add_number1_copy<23>
+                                                       e[1].f[2].add_number1_copy_23
+    SLICE_X26Y130.F4     net (fanout=6)        0.772   e[1].f[2].add_number1_copy<23>
+    SLICE_X26Y130.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.F4     net (fanout=5)        0.682   e[1].f[2].add_GND_454_o_GND_454_o_equal_9_o<30>13
+    SLICE_X22Y129.X      Tilo                  0.692   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+                                                       e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>111
+    SLICE_X20Y105.G1     net (fanout=98)       3.393   e[1].f[2].add_GND_454_o_GND_454_o_mux_10_OUT<18>11
+    SLICE_X20Y105.Y      Tilo                  0.707   e[1].f[2].add_GND_454_o_GND_454_o_mux_25_OUT<21>
+                                                       e[1].f[2].add_Sh512_SW1
+    SLICE_X20Y125.F3     net (fanout=2)        0.895   N1311
+    SLICE_X20Y125.X      Tif5x                 0.987   e[1].f[2].add_Sh4
+                                                       e[1].f[2].add_Sh423_G
+                                                       e[1].f[2].add_Sh423
+    SLICE_X21Y127.F4     net (fanout=2)        0.370   e[1].f[2].add_Sh4
+    SLICE_X21Y127.X      Tif5x                 0.924   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.F4     net (fanout=2)        0.568   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001
+    SLICE_X21Y119.X      Tilo                  0.643   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.F2     net (fanout=1)        0.986   e[1].f[2].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156
+    SLICE_X19Y104.COUT   Topcyf                1.195   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>
+    SLICE_X19Y105.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>
+    SLICE_X19Y106.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>
+    SLICE_X19Y107.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>
+    SLICE_X19Y108.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>
+    SLICE_X19Y109.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>
+    SLICE_X19Y110.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>
+    SLICE_X19Y111.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>
+    SLICE_X19Y112.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>
+    SLICE_X19Y113.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>
+    SLICE_X19Y114.COUT   Tbyp                  0.130   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.CIN    net (fanout=1)        0.000   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>
+    SLICE_X19Y115.XB     Tcinxb                0.296   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+                                                       e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.F4     net (fanout=24)       0.715   e[1].f[2].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>
+    SLICE_X18Y114.X      Tilo                  0.692   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+                                                       e[1].f[2].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT1101
+    SLICE_X13Y94.F3      net (fanout=1)        1.224   e[1].f[2].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>
+    SLICE_X13Y94.COUT    Topcyf                1.195   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>
+    SLICE_X13Y95.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>
+    SLICE_X13Y96.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>
+    SLICE_X13Y97.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>
+    SLICE_X13Y98.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.CIN     net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>
+    SLICE_X13Y99.COUT    Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>
+    SLICE_X13Y100.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>
+    SLICE_X13Y101.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>
+    SLICE_X13Y102.COUT   Tbyp                  0.130   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.CIN    net (fanout=1)        0.000   e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>
+    SLICE_X13Y103.Y      Tciny                 0.864   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>
+                                                       e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<19>
+    SLICE_X10Y105.F4     net (fanout=5)        0.468   e[1].f[2].add_GND_454_o_BUS_0001_mux_24_OUT<19>
+    SLICE_X10Y105.X      Tilo                  0.692   N858
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0
+    SLICE_X9Y92.G3       net (fanout=3)        0.735   N858
+    SLICE_X9Y92.X        Tif5x                 0.924   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F
+                                                       e[1].f[2].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14
+    SLICE_X9Y88.G2       net (fanout=50)       1.511   e[1].f[2].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1
+    SLICE_X9Y88.X        Tif5x                 0.924   e[1].f[2].add_Sh75
+                                                       e[1].f[2].add_Sh75_F
+                                                       e[1].f[2].add_Sh75
+    SLICE_X8Y102.G3      net (fanout=1)        0.623   e[1].f[2].add_Sh75
+    SLICE_X8Y102.CLK     Tgck                  0.817   res_2_2<94>
+                                                       Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT94
+                                                       res_2_2_69
+    -------------------------------------------------  ---------------------------
+
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+

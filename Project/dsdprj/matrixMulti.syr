@@ -1,0 +1,1023 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.18 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.19 secs
+ 
+--> WARNING:Xst:1583 - You are using an internal switch '-use_new_parser'.
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+Reading design: matrixMulti.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "matrixMulti.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "matrixMulti"
+Output Format                      : NGC
+Target Device                      : xc3sd3400a-4-fg676
+
+---- Source Options
+Use New Parser                     : yes
+Top Module Name                    : matrixMulti
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 99
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 96
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" into library work
+Parsing module <single_multiplier>.
+Analyzing Verilog file "C:\Users\sa\Desktop\dsd prj us\dsdprj\Memory.v" into library work
+Parsing module <Memory>.
+Analyzing Verilog file "C:\Users\sa\Desktop\dsd prj us\dsdprj\adder.v" into library work
+Parsing module <adder>.
+Analyzing Verilog file "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" into library work
+Parsing verilog file "states.v" included at line 2.
+Parsing module <matrixMulti>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <matrixMulti>.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 176: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 89: Assignment to strtRead ignored, since the identifier is never used
+
+Elaborating module <Memory(n=14)>.
+WARNING:HDLCompiler:1127 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 208: Assignment to readMem ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 243: Result of 64-bit expression is truncated to fit in 32-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 260: Result of 64-bit expression is truncated to fit in 32-bit target.
+
+Elaborating module <single_multiplier>.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 88: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 89: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 165: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 175: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 182: Result of 12-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 199: Result of 32-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 212: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 225: Result of 25-bit expression is truncated to fit in 24-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 227: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v" Line 236: Result of 9-bit expression is truncated to fit in 8-bit target.
+
+Elaborating module <adder>.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\adder.v" Line 149: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\adder.v" Line 153: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\adder.v" Line 157: Result of 3-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:91 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 297: Signal <res> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:634 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 52: Net <memRead> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" Line 55: Net <memAddrRe[4]> does not have a driver.
+WARNING:Xst:2972 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" line 206. All outputs of instance <mem> of block <Memory> are unconnected in block <matrixMulti>. Underlying logic will be removed.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <matrixMulti>.
+    Related source file is "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v".
+        r1 = 2
+        c1 = 2
+        c2 = 2
+        width = 32
+INFO:Xst:3210 - "C:\Users\sa\Desktop\dsd prj us\dsdprj\matrixMulti.v" line 206: Output port <read_data> of the instance <mem> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <memAddrRe> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <memRead> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 1-bit register for signal <rstMult>.
+    Found 128-bit register for signal <mat2Copy>.
+    Found 128-bit register for signal <result>.
+    Found 128-bit register for signal <mat1Copy>.
+    Found 2-bit register for signal <select>.
+    Found 3-bit register for signal <state>.
+    Found 1-bit register for signal <rstAdder>.
+    Found 1-bit register for signal <finish>.
+    Found 1-bit register for signal <output_ack>.
+    Found 1-bit register for signal <in1_stb>.
+    Found 1-bit register for signal <in2_stb>.
+    Found 1-bit register for signal <res_ack>.
+    Found 1-bit register for signal <lwAdder>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 26                                             |
+    | Inputs             | 19                                             |
+    | Outputs            | 6                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (negative)                                 |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 000                                            |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 3-bit subtractor for signal <GND_1_o_GND_1_o_sub_43_OUT> created at line 243.
+    Found 2-bit adder for signal <select[1]_GND_1_o_add_11_OUT> created at line 176.
+    Found 64-bit shifter logical right for signal <n0098> created at line 243
+    Found 64-bit shifter logical right for signal <n0099> created at line 243
+    Found 64-bit shifter logical right for signal <n0100> created at line 260
+    Found 64-bit shifter logical right for signal <n0101> created at line 260
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred 394 D-type flip-flop(s).
+	inferred  12 Multiplexer(s).
+	inferred   4 Combinational logic shifter(s).
+	inferred   1 Finite State Machine(s).
+Unit <matrixMulti> synthesized.
+
+Synthesizing Unit <single_multiplier>.
+    Related source file is "C:\Users\sa\Desktop\dsd prj us\dsdprj\single_multiplier.v".
+        get_a = 4'b0000
+        get_b = 4'b0001
+        unpack = 4'b0010
+        special_cases = 4'b0011
+        normalise_a = 4'b0100
+        normalise_b = 4'b0101
+        multiply_0 = 4'b0110
+        multiply_1 = 4'b0111
+        normalise_1 = 4'b1000
+        normalise_2 = 4'b1001
+        round = 4'b1010
+        pack = 4'b1011
+        put_z = 4'b1100
+    Found 32-bit register for signal <s_output_z>.
+    Found 4-bit register for signal <state>.
+    Found 32-bit register for signal <z>.
+    Found 24-bit register for signal <z_m>.
+    Found 10-bit register for signal <z_e>.
+    Found 1-bit register for signal <guard>.
+    Found 1-bit register for signal <round_bit>.
+    Found 1-bit register for signal <sticky>.
+    Found 1-bit register for signal <z_s>.
+    Found 50-bit register for signal <product>.
+    Found 24-bit register for signal <b_m>.
+    Found 10-bit register for signal <b_e>.
+    Found 24-bit register for signal <a_m>.
+    Found 10-bit register for signal <a_e>.
+    Found 1-bit register for signal <a_s>.
+    Found 1-bit register for signal <b_s>.
+    Found 1-bit register for signal <s_input_b_ack>.
+    Found 32-bit register for signal <b>.
+    Found 1-bit register for signal <s_input_a_ack>.
+    Found 32-bit register for signal <a>.
+    Found 1-bit register for signal <s_output_z_stb>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 13                                             |
+    | Transitions        | 31                                             |
+    | Inputs             | 17                                             |
+    | Outputs            | 4                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | rst (positive)                                 |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit subtractor for signal <GND_452_o_GND_452_o_sub_6_OUT> created at line 88.
+    Found 9-bit subtractor for signal <GND_452_o_GND_452_o_sub_7_OUT> created at line 89.
+    Found 11-bit adder for signal <n0319> created at line 182.
+    Found 11-bit adder for signal <n0249> created at line 182.
+    Found 24-bit adder for signal <z_m[23]_GND_452_o_add_69_OUT> created at line 225.
+    Found 10-bit adder for signal <z_e[9]_GND_452_o_add_71_OUT> created at line 227.
+    Found 8-bit adder for signal <z_e[7]_GND_452_o_add_75_OUT> created at line 236.
+    Found 10-bit subtractor for signal <GND_452_o_GND_452_o_sub_48_OUT<9:0>> created at line 165.
+    Found 10-bit subtractor for signal <GND_452_o_GND_452_o_sub_52_OUT<9:0>> created at line 175.
+    Found 10-bit subtractor for signal <GND_452_o_GND_452_o_sub_61_OUT<9:0>> created at line 199.
+    Found 24x24-bit multiplier for signal <a_m[23]_b_m[23]_MuLt_57_OUT> created at line 183.
+    Found 32-bit comparator greater for signal <PWR_5_o_z_e[9]_LessThan_65_o> created at line 211
+    Found 32-bit comparator greater for signal <z_e[9]_GND_452_o_LessThan_79_o> created at line 242
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   9 Adder/Subtractor(s).
+	inferred 289 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  75 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <single_multiplier> synthesized.
+
+Synthesizing Unit <adder>.
+    Related source file is "C:\Users\sa\Desktop\dsd prj us\dsdprj\adder.v".
+    Found 2-bit register for signal <state>.
+    Found 32-bit register for signal <number1_copy>.
+    Found 32-bit register for signal <number2_copy>.
+    Found 1-bit register for signal <start>.
+    Found 1-bit register for signal <result_ready>.
+    Found finite state machine <FSM_2> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 2                                              |
+    | Outputs            | 3                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | 00                                             |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 9-bit subtractor for signal <GND_454_o_GND_454_o_sub_3_OUT> created at line 67.
+    Found 9-bit subtractor for signal <GND_454_o_GND_454_o_sub_4_OUT> created at line 74.
+    Found 24-bit subtractor for signal <GND_454_o_GND_454_o_sub_24_OUT> created at line 131.
+    Found 24-bit adder for signal <n0135> created at line 129.
+    Found 8-bit adder for signal <number2_copy[30]_GND_454_o_add_31_OUT> created at line 162.
+    Found 23-bit shifter logical right for signal <PWR_8_o_GND_454_o_shift_right_12_OUT> created at line 93
+    Found 24-bit shifter logical left for signal <n0113> created at line 164
+WARNING:Xst:737 - Found 1-bit latch for signal <renorm_shift_80<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <renorm_shift_80<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <renorm_shift_80<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <renorm_shift_80<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Found 23-bit comparator greater for signal <number1_copy[22]_number2_copy[22]_LessThan_17_o> created at line 111
+    Found 1-bit comparator equal for signal <number1_copy[31]_number2_copy[31]_equal_22_o> created at line 128
+    Found 8-bit comparator greater for signal <number2_copy[30]_number1_copy[30]_LessThan_2_o> created at line 173
+    Found 8-bit comparator greater for signal <number1_copy[30]_number2_copy[30]_LessThan_36_o> created at line 175
+    Found 23-bit comparator greater for signal <number2_copy[22]_number1_copy[22]_LessThan_37_o> created at line 180
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred  66 D-type flip-flop(s).
+	inferred   4 Latch(s).
+	inferred   5 Comparator(s).
+	inferred  33 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
+	inferred   1 Finite State Machine(s).
+Unit <adder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 24x24-bit multiplier                                  : 4
+# Adders/Subtractors                                   : 54
+ 10-bit addsub                                         : 4
+ 10-bit subtractor                                     : 8
+ 11-bit adder                                          : 8
+ 2-bit adder                                           : 1
+ 24-bit adder                                          : 4
+ 24-bit addsub                                         : 4
+ 3-bit subtractor                                      : 1
+ 8-bit adder                                           : 8
+ 9-bit subtractor                                      : 16
+# Registers                                            : 104
+ 1-bit register                                        : 44
+ 10-bit register                                       : 12
+ 128-bit register                                      : 3
+ 2-bit register                                        : 5
+ 24-bit register                                       : 12
+ 32-bit register                                       : 24
+ 50-bit register                                       : 4
+# Latches                                              : 16
+ 1-bit latch                                           : 16
+# Comparators                                          : 28
+ 1-bit comparator equal                                : 4
+ 23-bit comparator greater                             : 8
+ 32-bit comparator greater                             : 8
+ 8-bit comparator greater                              : 8
+# Multiplexers                                         : 444
+ 1-bit 2-to-1 multiplexer                              : 296
+ 10-bit 2-to-1 multiplexer                             : 20
+ 128-bit 2-to-1 multiplexer                            : 3
+ 2-bit 2-to-1 multiplexer                              : 1
+ 23-bit 2-to-1 multiplexer                             : 28
+ 24-bit 2-to-1 multiplexer                             : 32
+ 32-bit 2-to-1 multiplexer                             : 36
+ 4-bit 2-to-1 multiplexer                              : 20
+ 64-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 12
+ 23-bit shifter logical right                          : 4
+ 24-bit shifter logical left                           : 4
+ 64-bit shifter logical right                          : 4
+# FSMs                                                 : 9
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <product_0> in Unit <e[1].f[1].mul> is equivalent to the following FF/Latch, which will be removed : <product_1> 
+INFO:Xst:2261 - The FF/Latch <product_0> in Unit <e[1].f[2].mul> is equivalent to the following FF/Latch, which will be removed : <product_1> 
+INFO:Xst:2261 - The FF/Latch <product_0> in Unit <e[2].f[1].mul> is equivalent to the following FF/Latch, which will be removed : <product_1> 
+INFO:Xst:2261 - The FF/Latch <product_0> in Unit <e[2].f[2].mul> is equivalent to the following FF/Latch, which will be removed : <product_1> 
+WARNING:Xst:1710 - FF/Latch <product_0> (without init value) has a constant value of 0 in block <e[1].f[1].mul>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <renorm_shift_80_3> (without init value) has a constant value of 0 in block <e[1].f[1].add>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <product_0> (without init value) has a constant value of 0 in block <e[1].f[2].mul>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <renorm_shift_80_3> (without init value) has a constant value of 0 in block <e[1].f[2].add>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <product_0> (without init value) has a constant value of 0 in block <e[2].f[1].mul>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <renorm_shift_80_3> (without init value) has a constant value of 0 in block <e[2].f[1].add>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <product_0> (without init value) has a constant value of 0 in block <e[2].f[2].mul>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <renorm_shift_80_3> (without init value) has a constant value of 0 in block <e[2].f[2].add>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <matrixMulti>.
+The following registers are absorbed into counter <select>: 1 register on signal <select>.
+Unit <matrixMulti> synthesized (advanced).
+
+Synthesizing (advanced) Unit <single_multiplier>.
+The following registers are absorbed into counter <z_e>: 1 register on signal <z_e>.
+The following registers are absorbed into counter <b_e>: 1 register on signal <b_e>.
+The following registers are absorbed into counter <a_e>: 1 register on signal <a_e>.
+	Found pipelined multiplier on signal <a_m[23]_b_m[23]_MuLt_57_OUT>:INFO:Xst:2385 - HDL ADVISOR - You can improve the performance of the multiplier Mmult_a_m[23]_b_m[23]_MuLt_57_OUT by adding 7 register level(s).
+Unit <single_multiplier> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 4
+ 24x24-bit multiplier                                  : 4
+# Adders/Subtractors                                   : 37
+ 10-bit adder carry in                                 : 4
+ 24-bit adder                                          : 4
+ 24-bit addsub                                         : 4
+ 3-bit subtractor                                      : 1
+ 8-bit adder                                           : 8
+ 9-bit subtractor                                      : 16
+# Counters                                             : 13
+ 10-bit down counter                                   : 8
+ 10-bit updown counter                                 : 4
+ 2-bit up counter                                      : 1
+# Registers                                            : 1692
+ Flip-Flops                                            : 1692
+# Comparators                                          : 28
+ 1-bit comparator equal                                : 4
+ 23-bit comparator greater                             : 8
+ 32-bit comparator greater                             : 8
+ 8-bit comparator greater                              : 8
+# Multiplexers                                         : 431
+ 1-bit 2-to-1 multiplexer                              : 296
+ 10-bit 2-to-1 multiplexer                             : 8
+ 128-bit 2-to-1 multiplexer                            : 3
+ 23-bit 2-to-1 multiplexer                             : 28
+ 24-bit 2-to-1 multiplexer                             : 32
+ 32-bit 2-to-1 multiplexer                             : 36
+ 4-bit 2-to-1 multiplexer                              : 20
+ 64-bit 2-to-1 multiplexer                             : 4
+ 8-bit 2-to-1 multiplexer                              : 4
+# Logic shifters                                       : 12
+ 23-bit shifter logical right                          : 4
+ 24-bit shifter logical left                           : 4
+ 64-bit shifter logical right                          : 4
+# FSMs                                                 : 9
+# Xors                                                 : 4
+ 1-bit xor2                                            : 4
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <product_0> (without init value) has a constant value of 0 in block <single_multiplier>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <product_1> (without init value) has a constant value of 0 in block <single_multiplier>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <renorm_shift_80_3> (without init value) has a constant value of 0 in block <adder>. This FF/Latch will be trimmed during the optimization process.
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:3]> with gray encoding.
+-------------------
+ State | Encoding
+-------------------
+ 000   | 000
+ 001   | 001
+ 010   | 011
+ 011   | 010
+ 100   | 110
+ 101   | 111
+ 110   | 101
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <e[1].f[1].mul/FSM_1> on signal <state[1:4]> with user encoding.
+Optimizing FSM <e[1].f[2].mul/FSM_1> on signal <state[1:4]> with user encoding.
+Optimizing FSM <e[2].f[1].mul/FSM_1> on signal <state[1:4]> with user encoding.
+Optimizing FSM <e[2].f[2].mul/FSM_1> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 0011  | 0011
+ 0100  | 0100
+ 1100  | 1100
+ 0101  | 0101
+ 0110  | 0110
+ 0111  | 0111
+ 1000  | 1000
+ 1001  | 1001
+ 1010  | 1010
+ 1011  | 1011
+-------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <e[1].f[1].add/FSM_2> on signal <state[1:2]> with user encoding.
+Optimizing FSM <e[1].f[2].add/FSM_2> on signal <state[1:2]> with user encoding.
+Optimizing FSM <e[2].f[1].add/FSM_2> on signal <state[1:2]> with user encoding.
+Optimizing FSM <e[2].f[2].add/FSM_2> on signal <state[1:2]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 00    | 00
+ 01    | 01
+ 10    | 10
+-------------------
+
+Optimizing unit <matrixMulti> ...
+
+Optimizing unit <single_multiplier> ...
+
+Optimizing unit <adder> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 99 (+ 5) on block matrixMulti, actual ratio is 9.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1833
+ Flip-Flops                                            : 1833
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : matrixMulti.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 5950
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 92
+#      LUT2                        : 853
+#      LUT2_D                      : 16
+#      LUT3                        : 1175
+#      LUT3_D                      : 175
+#      LUT3_L                      : 39
+#      LUT4                        : 1689
+#      LUT4_D                      : 180
+#      LUT4_L                      : 52
+#      MULT_AND                    : 36
+#      MUXCY                       : 688
+#      MUXF5                       : 518
+#      VCC                         : 1
+#      XORCY                       : 424
+# FlipFlops/Latches                : 1845
+#      FDC                         : 11
+#      FDCE                        : 652
+#      FDE                         : 1141
+#      FDPE                        : 1
+#      FDR                         : 16
+#      FDRE                        : 12
+#      LDE                         : 12
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 388
+#      IBUF                        : 259
+#      OBUF                        : 129
+# DSPs                             : 16
+#      DSP48A                      : 16
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[2].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[1].f[2].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<1> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<2> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<3> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<4> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<5> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<6> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<7> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<8> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<9> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<10> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<11> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<12> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<13> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<14> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<15> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<16> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<17> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<18> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<19> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<20> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<20> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<21> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<21> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+PACKER Warning: Lut e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<22> driving carry e[1].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<22> can not be packed with the carry due to conflict with the common signal requirement between the LUT inputs and the Carry DI/MAND pins. This would result in an extra LUT for a feedthrough.
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3sd3400afg676-4 
+
+ Number of Slices:                     2597  out of  23872    10%  
+ Number of Slice Flip Flops:           1845  out of  47744     3%  
+ Number of 4 input LUTs:               4282  out of  47744     8%  
+ Number of IOs:                         389
+ Number of bonded IOBs:                 389  out of    469    82%  
+ Number of GCLKs:                         1  out of     24     4%  
+ Number of DSP48s:                       16  out of    126    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                | Load  |
+-----------------------------------+--------------------------------------+-------+
+clk                                | BUFGP                                | 1833  |
+e[2].f[2].add_start                | NONE(e[2].f[2].add_renorm_shift_80_0)| 3     |
+e[2].f[1].add_start                | NONE(e[2].f[1].add_renorm_shift_80_0)| 3     |
+e[1].f[2].add_start                | NONE(e[1].f[2].add_renorm_shift_80_0)| 3     |
+e[1].f[1].add_start                | NONE(e[1].f[1].add_renorm_shift_80_0)| 3     |
+-----------------------------------+--------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+---------------------------------------------------------+-----------------------------------+-------+
+Control Signal                                           | Buffer(FF name)                   | Load  |
+---------------------------------------------------------+-----------------------------------+-------+
+rst_inv(rst_inv1_INV_0:O)                                | NONE(res_2_2_77)                  | 392   |
+e[1].f[1].add_reset_inv(e[2].f[2].add_reset_inv1_INV_0:O)| NONE(e[2].f[2].add_number1_copy_4)| 272   |
+---------------------------------------------------------+-----------------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 25.736ns (Maximum Frequency: 38.856MHz)
+   Minimum input arrival time before clock: 4.724ns
+   Maximum output required time after clock: 5.558ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 25.736ns (frequency: 38.856MHz)
+  Total number of paths / destination ports: 5770811991 / 3664
+-------------------------------------------------------------------------
+Delay:               25.736ns (Levels of Logic = 62)
+  Source:            e[2].f[1].add_number1_copy_23 (FF)
+  Destination:       res_2_2_36 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: e[2].f[1].add_number1_copy_23 to res_2_2_36
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             6   0.591   0.812  e[2].f[1].add_number1_copy_23 (e[2].f[1].add_number1_copy_23)
+     LUT2:I0->O            1   0.648   0.000  e[2].f[1].add_Msub_GND_454_o_GND_454_o_sub_3_OUT_lut<0> (e[2].f[1].add_Msub_GND_454_o_GND_454_o_sub_3_OUT_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  e[2].f[1].add_Msub_GND_454_o_GND_454_o_sub_3_OUT_cy<0> (e[2].f[1].add_Msub_GND_454_o_GND_454_o_sub_3_OUT_cy<0>)
+     XORCY:CI->O          28   0.844   1.264  e[2].f[1].add_Msub_GND_454_o_GND_454_o_sub_3_OUT_xor<1> (e[2].f[1].add_GND_454_o_GND_454_o_sub_3_OUT<1>)
+     LUT4:I3->O            2   0.648   0.479  e[2].f[1].add_Sh1221_SW0 (N1343)
+     LUT4:I2->O            1   0.648   0.000  e[2].f[1].add_Sh121_F (N1929)
+     MUXF5:I0->O           3   0.276   0.611  e[2].f[1].add_Sh121 (e[2].f[1].add_Sh12)
+     LUT3:I1->O            1   0.643   0.000  e[2].f[1].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001_G (N1734)
+     MUXF5:I1->O           2   0.276   0.447  e[2].f[1].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001 (e[2].f[1].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT11001)
+     MUXF5:S->O            1   0.756   0.500  e[2].f[1].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156 (e[2].f[1].add_Mmux_number1_copy[22]_PWR_8_o_mux_13_OUT1156)
+     LUT2:I1->O            1   0.643   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<19>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<20>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<21>)
+     MUXCY:CI->O          24   0.269   1.255  e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22> (e[2].f[1].add_Mcompar_number1_copy[22]_number2_copy[22]_LessThan_17_o_cy<22>)
+     LUT4:I3->O            1   0.648   0.500  e[2].f[1].add_Mmux_number1_copy[22]_number2_copy[22]_mux_18_OUT1101 (e[2].f[1].add_number2_copy[22]_number1_copy[22]_mux_17_OUT<0>)
+     LUT3:I1->O            1   0.643   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_lut<0>)
+     MUXCY:S->O            1   0.632   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<0>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<1>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<2>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<3>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<4>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<5>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<6>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<7>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<8>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<9>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<10>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<11>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<12>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<13>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<14>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<15>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<16>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<17>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<18>)
+     MUXCY:CI->O           1   0.065   0.000  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19> (e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_cy<19>)
+     XORCY:CI->O           3   0.844   0.534  e[2].f[1].add_Maddsub_GND_454_o_BUS_0001_mux_24_OUT_xor<20> (e[2].f[1].add_GND_454_o_BUS_0001_mux_24_OUT<20>)
+     LUT4_D:I3->O          1   0.648   0.452  e[2].f[1].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_SW0 (N856)
+     LUT3:I2->O            1   0.648   0.000  e[2].f[1].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14_F (N2649)
+     MUXF5:I0->O          37   0.276   1.296  e[2].f[1].add_Mmux_renorm_exp_80_PWR_8_o_MUX_2346_o14 (e[2].f[1].add_renorm_shift_80[3]_GND_454_o_mux_30_OUT<1>1)
+     LUT3:I2->O            2   0.648   0.527  e[2].f[1].add_Sh74_SW1 (N950)
+     LUT3:I1->O            1   0.643   0.423  e[2].f[1].add_Sh74 (e[2].f[1].add_Sh74)
+     LUT4:I3->O            1   0.648   0.000  Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT5826 (Mmux_state[2]_res[1][1][31]_wide_mux_27_OUT5826)
+     FDCE:D                    0.252          res_2_2_36
+    ----------------------------------------
+    Total                     25.736ns (16.636ns logic, 9.100ns route)
+                                       (64.6% logic, 35.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 794 / 650
+-------------------------------------------------------------------------
+Offset:              4.724ns (Levels of Logic = 4)
+  Source:            rst (PAD)
+  Destination:       output_ack (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to output_ack
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            11   0.849   1.076  rst_IBUF (rst_IBUF)
+     LUT4:I0->O            1   0.648   0.500  _n0296_inv61 (_n0296_inv_bdd2)
+     LUT4:I1->O            1   0.643   0.000  _n0296_inv12 (_n0296_inv11)
+     MUXF5:I0->O           1   0.276   0.420  _n0296_inv1_f5 (_n0296_inv)
+     FDE:CE                    0.312          output_ack
+    ----------------------------------------
+    Total                      4.724ns (2.728ns logic, 1.996ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 129 / 129
+-------------------------------------------------------------------------
+Offset:              5.558ns (Levels of Logic = 1)
+  Source:            res_2_2_127 (FF)
+  Destination:       result<127> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: res_2_2_127 to result<127>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             2   0.591   0.447  res_2_2_127 (res_2_2_127)
+     OBUF:I->O                 4.520          result_127_OBUF (result<127>)
+    ----------------------------------------
+    Total                      5.558ns (5.111ns logic, 0.447ns route)
+                                       (92.0% logic, 8.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+-------------------+---------+---------+---------+---------+
+                   | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock       |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------+---------+---------+---------+---------+
+clk                |   25.736|         |         |         |
+e[1].f[1].add_start|         |    7.875|         |         |
+e[1].f[2].add_start|         |    8.294|         |         |
+e[2].f[1].add_start|         |    8.990|         |         |
+e[2].f[2].add_start|         |    8.293|         |         |
+-------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock e[1].f[1].add_start
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   23.838|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock e[1].f[2].add_start
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   24.075|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock e[2].f[1].add_start
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   23.558|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock e[2].f[2].add_start
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |   23.563|         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.63 secs
+ 
+WARNING:Xst:3152 - You have chosen to run a version of XST which is not the default solution
+   for the specified device family. You are free to use it in order to take
+   advantage of its enhanced HDL parsing/elaboration capabilities. However,
+   please be aware that you may be impacted by  language support differences.
+   This version may also result in circuit performance and device utilization
+   differences for your particular design. You can always revert back to the
+   default XST solution by setting the "use_new_parser" option to value "no" 
+   on the XST command line or in the XST process properties panel.
+--> 
+
+Total memory usage is 4535456 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   42 (   0 filtered)
+Number of infos    :    8 (   0 filtered)
+

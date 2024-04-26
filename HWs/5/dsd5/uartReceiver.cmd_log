@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/prj/dsd/dsd5/uartReceiver.xst" -ofn "D:/prj/dsd/dsd5/uartReceiver.syr" 

@@ -1,0 +1,125 @@
+ISim log file
+Running: C:\Users\sa\Desktop\dsd4\HW4-98170668\dsd4f\test_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb C:/Users/sa/Desktop/dsd4/HW4-98170668/dsd4f/test_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING: File "C:/Users/sa/Desktop/dsd4/HW4-98170668/dsd4f/test.v" Line 6.  For instance test/lfsr8/, width 8 of formal port num is not equal to width 1 of actual signal num.
+WARNING: File "C:/Users/sa/Desktop/dsd4/HW4-98170668/dsd4f/test.v" Line 5.  For instance test/lfsr8/, width 8 of formal port rand is not equal to width 17 of actual variable rand. 
+WARNING: File "C:/Users/sa/Desktop/dsd4/HW4-98170668/dsd4f/test.v" Line 6.  For instance test/lfsr17/, width 17 of formal port num is not equal to width 1 of actual signal num.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+0ns   feedback = x lfsr_reg = xxxxxxxxxxxxxxxxx  lfsr_out = x
+10ns   feedback = 0 lfsr_reg = 10011010100100100  lfsr_out = 0
+30ns   feedback = 0 lfsr_reg = 01001101010010010  lfsr_out = 0
+50ns   feedback = 0 lfsr_reg = 00100110101001001  lfsr_out = 1
+70ns   feedback = 1 lfsr_reg = 00010011010100100  lfsr_out = 0
+90ns   feedback = 1 lfsr_reg = 10001001101010010  lfsr_out = 0
+110ns   feedback = 1 lfsr_reg = 11000100110101001  lfsr_out = 1
+130ns   feedback = 0 lfsr_reg = 11100010011010100  lfsr_out = 0
+150ns   feedback = 0 lfsr_reg = 01110001001101010  lfsr_out = 0
+170ns   feedback = 1 lfsr_reg = 00111000100110101  lfsr_out = 1
+190ns   feedback = 1 lfsr_reg = 10011100010011010  lfsr_out = 0
+210ns   feedback = 0 lfsr_reg = 11001110001001101  lfsr_out = 1
+230ns   feedback = 1 lfsr_reg = 01100111000100110  lfsr_out = 0
+250ns   feedback = 1 lfsr_reg = 10110011100010011  lfsr_out = 1
+270ns   feedback = 1 lfsr_reg = 11011001110001001  lfsr_out = 1
+290ns   feedback = 0 lfsr_reg = 11101100111000100  lfsr_out = 0
+310ns   feedback = 0 lfsr_reg = 01110110011100010  lfsr_out = 0
+330ns   feedback = 0 lfsr_reg = 00111011001110001  lfsr_out = 1
+350ns   feedback = 0 lfsr_reg = 00011101100111000  lfsr_out = 0
+370ns   feedback = 1 lfsr_reg = 00001110110011100  lfsr_out = 0
+390ns   feedback = 0 lfsr_reg = 10000111011001110  lfsr_out = 0
+410ns   feedback = 1 lfsr_reg = 01000011101100111  lfsr_out = 1
+430ns   feedback = 1 lfsr_reg = 10100001110110011  lfsr_out = 1
+450ns   feedback = 1 lfsr_reg = 11010000111011001  lfsr_out = 1
+470ns   feedback = 0 lfsr_reg = 11101000011101100  lfsr_out = 0
+490ns   feedback = 1 lfsr_reg = 01110100001110110  lfsr_out = 0
+510ns   feedback = 1 lfsr_reg = 10111010000111011  lfsr_out = 1
+530ns   feedback = 0 lfsr_reg = 11011101000011101  lfsr_out = 1
+550ns   feedback = 1 lfsr_reg = 01101110100001110  lfsr_out = 0
+570ns   feedback = 0 lfsr_reg = 10110111010000111  lfsr_out = 1
+590ns   feedback = 0 lfsr_reg = 01011011101000011  lfsr_out = 1
+610ns   feedback = 0 lfsr_reg = 00101101110100001  lfsr_out = 1
+630ns   feedback = 0 lfsr_reg = 00010110111010000  lfsr_out = 0
+640ns   feedback = 1 lfsr_reg = 10111010  lfsr_out = 0
+650ns   feedback = 0 lfsr_reg = 10000001  lfsr_out = 1
+670ns   feedback = 0 lfsr_reg = 01000000  lfsr_out = 0
+690ns   feedback = 1 lfsr_reg = 00100000  lfsr_out = 0
+710ns   feedback = 0 lfsr_reg = 10010000  lfsr_out = 0
+730ns   feedback = 0 lfsr_reg = 01001000  lfsr_out = 0
+750ns   feedback = 1 lfsr_reg = 00100100  lfsr_out = 0
+770ns   feedback = 0 lfsr_reg = 10010010  lfsr_out = 0
+790ns   feedback = 1 lfsr_reg = 01001001  lfsr_out = 1
+810ns   feedback = 0 lfsr_reg = 10100100  lfsr_out = 0
+830ns   feedback = 1 lfsr_reg = 01010010  lfsr_out = 0
+850ns   feedback = 1 lfsr_reg = 10101001  lfsr_out = 1
+870ns   feedback = 0 lfsr_reg = 11010100  lfsr_out = 0
+890ns   feedback = 1 lfsr_reg = 01101010  lfsr_out = 0
+910ns   feedback = 0 lfsr_reg = 10110101  lfsr_out = 1
+930ns   feedback = 1 lfsr_reg = 01011010  lfsr_out = 0
+950ns   feedback = 1 lfsr_reg = 10101101  lfsr_out = 1
+970ns   feedback = 0 lfsr_reg = 11010110  lfsr_out = 0
+990ns   feedback = 0 lfsr_reg = 01101011  lfsr_out = 1
+ISim P.20131013 (signature 0x7708f090)
+This is a Full version of ISim.
+WARNING: File "C:/Users/sa/Desktop/dsd4/HW4-98170668/dsd4f/test.v" Line 6.  For instance test/lfsr8/, width 8 of formal port num is not equal to width 1 of actual signal num.
+WARNING: File "C:/Users/sa/Desktop/dsd4/HW4-98170668/dsd4f/test.v" Line 5.  For instance test/lfsr8/, width 8 of formal port rand is not equal to width 17 of actual variable rand. 
+WARNING: File "C:/Users/sa/Desktop/dsd4/HW4-98170668/dsd4f/test.v" Line 6.  For instance test/lfsr17/, width 17 of formal port num is not equal to width 1 of actual signal num.
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+0ns   feedback = x lfsr_reg = xxxxxxxxxxxxxxxxx  lfsr_out = x
+10ns   feedback = 0 lfsr_reg = 10011010100100100  lfsr_out = 0
+30ns   feedback = 0 lfsr_reg = 01001101010010010  lfsr_out = 0
+50ns   feedback = 0 lfsr_reg = 00100110101001001  lfsr_out = 1
+70ns   feedback = 1 lfsr_reg = 00010011010100100  lfsr_out = 0
+90ns   feedback = 1 lfsr_reg = 10001001101010010  lfsr_out = 0
+110ns   feedback = 1 lfsr_reg = 11000100110101001  lfsr_out = 1
+130ns   feedback = 0 lfsr_reg = 11100010011010100  lfsr_out = 0
+150ns   feedback = 0 lfsr_reg = 01110001001101010  lfsr_out = 0
+170ns   feedback = 1 lfsr_reg = 00111000100110101  lfsr_out = 1
+190ns   feedback = 1 lfsr_reg = 10011100010011010  lfsr_out = 0
+210ns   feedback = 0 lfsr_reg = 11001110001001101  lfsr_out = 1
+230ns   feedback = 1 lfsr_reg = 01100111000100110  lfsr_out = 0
+250ns   feedback = 1 lfsr_reg = 10110011100010011  lfsr_out = 1
+270ns   feedback = 1 lfsr_reg = 11011001110001001  lfsr_out = 1
+290ns   feedback = 0 lfsr_reg = 11101100111000100  lfsr_out = 0
+310ns   feedback = 0 lfsr_reg = 01110110011100010  lfsr_out = 0
+330ns   feedback = 0 lfsr_reg = 00111011001110001  lfsr_out = 1
+350ns   feedback = 0 lfsr_reg = 00011101100111000  lfsr_out = 0
+370ns   feedback = 1 lfsr_reg = 00001110110011100  lfsr_out = 0
+390ns   feedback = 0 lfsr_reg = 10000111011001110  lfsr_out = 0
+410ns   feedback = 1 lfsr_reg = 01000011101100111  lfsr_out = 1
+430ns   feedback = 1 lfsr_reg = 10100001110110011  lfsr_out = 1
+450ns   feedback = 1 lfsr_reg = 11010000111011001  lfsr_out = 1
+470ns   feedback = 0 lfsr_reg = 11101000011101100  lfsr_out = 0
+490ns   feedback = 1 lfsr_reg = 01110100001110110  lfsr_out = 0
+510ns   feedback = 1 lfsr_reg = 10111010000111011  lfsr_out = 1
+530ns   feedback = 0 lfsr_reg = 11011101000011101  lfsr_out = 1
+550ns   feedback = 1 lfsr_reg = 01101110100001110  lfsr_out = 0
+570ns   feedback = 0 lfsr_reg = 10110111010000111  lfsr_out = 1
+590ns   feedback = 0 lfsr_reg = 01011011101000011  lfsr_out = 1
+610ns   feedback = 0 lfsr_reg = 00101101110100001  lfsr_out = 1
+630ns   feedback = 0 lfsr_reg = 00010110111010000  lfsr_out = 0
+640ns   feedback = 1 lfsr_reg = 10111010  lfsr_out = 0
+650ns   feedback = 0 lfsr_reg = 10000001  lfsr_out = 1
+670ns   feedback = 0 lfsr_reg = 01000000  lfsr_out = 0
+690ns   feedback = 1 lfsr_reg = 00100000  lfsr_out = 0
+710ns   feedback = 0 lfsr_reg = 10010000  lfsr_out = 0
+730ns   feedback = 0 lfsr_reg = 01001000  lfsr_out = 0
+750ns   feedback = 1 lfsr_reg = 00100100  lfsr_out = 0
+770ns   feedback = 0 lfsr_reg = 10010010  lfsr_out = 0
+790ns   feedback = 1 lfsr_reg = 01001001  lfsr_out = 1
+810ns   feedback = 0 lfsr_reg = 10100100  lfsr_out = 0
+830ns   feedback = 1 lfsr_reg = 01010010  lfsr_out = 0
+850ns   feedback = 1 lfsr_reg = 10101001  lfsr_out = 1
+870ns   feedback = 0 lfsr_reg = 11010100  lfsr_out = 0
+890ns   feedback = 1 lfsr_reg = 01101010  lfsr_out = 0
+910ns   feedback = 0 lfsr_reg = 10110101  lfsr_out = 1
+930ns   feedback = 1 lfsr_reg = 01011010  lfsr_out = 0
+950ns   feedback = 1 lfsr_reg = 10101101  lfsr_out = 1
+970ns   feedback = 0 lfsr_reg = 11010110  lfsr_out = 0
+990ns   feedback = 0 lfsr_reg = 01101011  lfsr_out = 1

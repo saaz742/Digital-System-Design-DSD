@@ -1,0 +1,28 @@
+Command line:
+   LFSR_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  8915
+
+Sat May 15 16:59:42 2021
+
+
+ Elaboration Time: 0.46875 sec
+
+ Current Memory Usage: 5163.33 Meg
+
+ Total Signals          : 18
+ Total Nets             : 51
+ Total Signal Drivers   : 7
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 9
+ Total Traceable Variables  : 20
+ Total Scalar Nets and Variables : 180
+
+ Total Simulation Time: 0.46875 sec
+
+ Current Memory Usage: 5163.33 Meg
+
+Sat May 15 16:59:44 2021
+

@@ -1,0 +1,107 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml receive.twx receive.ncd -o receive.twr receive.pcf
+
+Design file:              receive.ncd
+Physical constraint file: receive.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock rst to Pad
+------------+-----------------+------------+-----------------+------------+---------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                           | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)          | Phase  |
+------------+-----------------+------------+-----------------+------------+---------------------------+--------+
+out<0>      |         9.186(F)|      SLOW  |         4.033(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<1>      |         9.142(F)|      SLOW  |         4.034(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<2>      |         9.032(F)|      SLOW  |         3.970(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<3>      |         8.935(F)|      SLOW  |         3.920(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<4>      |         8.828(F)|      SLOW  |         3.858(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<5>      |         8.721(F)|      SLOW  |         3.797(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<6>      |         8.611(F)|      SLOW  |         3.733(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<7>      |         8.511(F)|      SLOW  |         3.679(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+par         |         8.403(F)|      SLOW  |         3.617(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+------------+-----------------+------------+-----------------+------------+---------------------------+--------+
+
+Clock uart_clock to Pad
+------------+-----------------+------------+-----------------+------------+---------------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                           | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s)          | Phase  |
+------------+-----------------+------------+-----------------+------------+---------------------------+--------+
+out<0>      |         7.403(F)|      SLOW  |         3.838(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<1>      |         7.359(F)|      SLOW  |         3.839(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<2>      |         7.249(F)|      SLOW  |         3.775(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<3>      |         7.152(F)|      SLOW  |         3.725(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<4>      |         7.045(F)|      SLOW  |         3.663(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<5>      |         6.938(F)|      SLOW  |         3.602(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<6>      |         6.828(F)|      SLOW  |         3.538(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+out<7>      |         6.728(F)|      SLOW  |         3.484(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+par         |         6.620(F)|      SLOW  |         3.422(F)|      FAST  |GND_1_o_uart_clock_AND_21_o|   0.000|
+------------+-----------------+------------+-----------------+------------+---------------------------+--------+
+
+Clock to Setup on destination clock rst
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rst            |         |         |    1.612|    3.591|
+serial_data    |         |         |    1.581|    2.672|
+uart_clock     |         |         |    1.645|    2.866|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock serial_data
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rst            |         |         |    1.161|    2.159|
+serial_data    |         |         |    1.140|    1.140|
+uart_clock     |         |         |    1.204|    2.159|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock uart_clock
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+rst            |         |         |    1.951|    3.591|
+serial_data    |         |         |    1.721|    2.672|
+uart_clock     |         |         |    1.785|    2.866|
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Fri Jun 04 19:20:53 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5003 MB
+
+
+
